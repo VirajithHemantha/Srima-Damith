@@ -1194,7 +1194,7 @@ export default function App() {
                       <h3 className="serif text-4xl md:text-5xl tracking-[0.3em] font-bold text-umber">RSVP</h3>
                     </div>
 
-                    <p className="text-[12px] md:text-sm uppercase tracking-[0.4em] text-umber/80 font-bold mt-1">by 20.06.2026</p>
+                    <p className="text-[12px] md:text-sm uppercase tracking-[0.4em] text-umber/80 font-bold mt-1">by 7/15</p>
                   </div>
                 </div>
               }
