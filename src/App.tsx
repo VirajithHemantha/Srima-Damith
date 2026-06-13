@@ -1067,25 +1067,19 @@ export default function App() {
                     </div>
 
                     {/* date / time / venue */}
-                    <div className="flex flex-col items-center w-full mt-2 gap-1.5">
-                      <div className="flex items-center gap-4 sm:gap-6 w-full px-4">
-                        <div className="h-px flex-1 bg-sand/60" />
-                        <span className="serif text-[32px] sm:text-[36px] md:text-5xl text-umber font-bold md:font-medium leading-none">
-                          1
-                        </span>
-                        <div className="h-px flex-1 bg-sand/60" />
-                      </div>
-                      <div className="flex flex-col items-center gap-1 mt-1 text-umber/70">
-                        <span className="text-[9px] sm:text-[10px] md:text-[11px] uppercase tracking-[0.3em] text-taupe font-bold">
-                          AUGUST · SATURDAY
-                        </span>
-                        <span className="text-[9px] sm:text-[10px] md:text-[11px] uppercase tracking-[0.25em] text-taupe font-bold">
-                          9:30 AM - 4:00 PM · 2026
-                        </span>
-                        <span className="serif mt-1 block max-w-[220px] px-2 text-[11px] sm:text-[12px] md:text-[13px] uppercase tracking-[0.12em] text-umber/75 text-center leading-snug break-words font-bold md:font-medium">
-                          AT HOME
-                        </span>
-                      </div>
+                    <div className="flex flex-col items-center w-full mt-3 gap-1 text-umber/70">
+                      <span className="text-[28px] sm:text-[32px] md:text-4xl text-umber font-bold leading-none mb-1">
+                        1
+                      </span>
+                      <span className="text-[9px] sm:text-[10px] md:text-[11px] uppercase tracking-[0.3em] text-taupe font-bold">
+                        AUGUST · SATURDAY
+                      </span>
+                      <span className="text-[9px] sm:text-[10px] md:text-[11px] uppercase tracking-[0.25em] text-taupe font-bold">
+                        9:30 AM - 4:00 PM · 2026
+                      </span>
+                      <span className="serif mt-1 block max-w-[220px] px-2 text-[11px] sm:text-[12px] md:text-[13px] uppercase tracking-[0.12em] text-umber/75 text-center leading-snug break-words font-bold md:font-medium">
+                        AT HOME
+                      </span>
                     </div>
 
                     {/* bottom ornament */}
@@ -1154,8 +1148,8 @@ export default function App() {
 
                   <div className="flex flex-col items-center">
                     <p className="text-[11px] md:text-sm uppercase tracking-[0.4em] text-umber/80 font-black mb-1 md:mb-2">Saturday</p>
-                    <div className="relative inline-block px-6 md:px-8 py-1 md:py-2 border-y border-umber/30">
-                      <p className="serif text-6xl md:text-9xl font-bold text-umber leading-none">1</p>
+                    <div className="relative inline-block px-6 md:px-8 py-1 md:py-2">
+                      <p className="text-6xl md:text-9xl font-bold text-umber leading-none">1</p>
                       <motion.div
                         animate={{ opacity: [0.4, 1, 0.4] }}
                         transition={{ repeat: Infinity, duration: 2 }}
