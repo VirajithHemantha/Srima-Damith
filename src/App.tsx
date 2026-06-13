@@ -1368,52 +1368,7 @@ export default function App() {
             />
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.7 }}
-            className="w-full h-full col-span-2 lg:col-span-2"
-          >
-            <FlipCard
-              containerClassName="w-full h-[300px] md:h-[350px] lg:h-[350px]"
-              front={
-                <div className="w-full h-full relative group overflow-hidden">
-                  <img
-                    src="/r/WhatsApp Image 2026-05-23 at 02.15.43 (2).jpeg"
-                    alt="Dress Code"
-                    className="w-full h-full object-cover opacity-80 transition-transform duration-1000 group-hover:scale-110"
-                    referrerPolicy="no-referrer"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/40" />
 
-                  <div className="absolute inset-0 flex flex-col items-center justify-center p-8 text-center z-20">
-                    <motion.div initial={{ scale: 0.8, opacity: 0 }} whileHover={{ scale: 1, opacity: 1 }} className="bg-white/10 backdrop-blur-lg p-6 rounded-full border border-white/20">
-                      <Sparkles size={32} className="text-white" />
-                    </motion.div>
-                    <p className="serif text-white text-3xl md:text-5xl italic tracking-widest mt-6 drop-shadow-lg">Dress Code</p>
-                  </div>
-
-                  <div className="absolute top-0 bottom-0 left-4 w-px bg-white/20" />
-                  <div className="absolute top-0 bottom-0 left-6 w-px bg-white/10" />
-                  <div className="absolute top-0 bottom-0 right-4 w-px bg-white/20" />
-                  <div className="absolute top-0 bottom-0 right-6 w-px bg-white/10" />
-                </div>
-              }
-              back={
-                <div className="w-full h-full flex flex-col justify-center items-center p-3 md:p-8">
-                  <Sparkles size={24} className="text-sage mb-4 md:mb-6 opacity-70 md:w-8 md:h-8" />
-                  <h4 className="serif text-2xl md:text-3xl text-sage mb-4">Dress Code</h4>
-                  <p className="serif text-lg md:text-xl font-bold text-umber mb-2">Elegant Night Garden Attire</p>
-                  <p className="text-[11px] md:text-sm text-zinc-500 max-w-xs leading-relaxed">
-                    We invite you to dress in elegant garden attire suited for a beautiful evening celebration.
-                    <br />
-                    <span className="italic mt-2 block">Florals, pastels, and smart elegant suits are welcomed.</span>
-                  </p>
-                </div>
-              }
-            />
-          </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 50 }}
