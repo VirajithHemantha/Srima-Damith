@@ -383,7 +383,7 @@ function RSVPForm() {
       <p className="text-[12px] md:text-sm text-umber/80 font-bold uppercase tracking-widest mb-4 md:mb-6 text-center leading-relaxed">
         Please let us know by
         <br />
-        15.07.2026
+        July 15, 2026
       </p>
 
       <form onSubmit={submit} className="space-y-4 md:space-y-4 px-1 md:px-2">
@@ -1067,12 +1067,15 @@ export default function App() {
                     </div>
 
                     {/* date / time / venue */}
-                    <div className="flex items-center gap-2 sm:gap-3 text-umber/70 w-full mt-1">
-                      <div className="h-px flex-1 bg-sand/45" />
-                      <div className="flex flex-col items-center gap-0.5">
-                        <span className="serif text-[28px] sm:text-[32px] md:text-4xl text-umber font-bold md:font-medium leading-none">
-                          01
+                    <div className="flex flex-col items-center w-full mt-2 gap-1.5">
+                      <div className="flex items-center gap-4 sm:gap-6 w-full px-4">
+                        <div className="h-px flex-1 bg-sand/60" />
+                        <span className="serif text-[32px] sm:text-[36px] md:text-5xl text-umber font-bold md:font-medium leading-none">
+                          1
                         </span>
+                        <div className="h-px flex-1 bg-sand/60" />
+                      </div>
+                      <div className="flex flex-col items-center gap-1 mt-1 text-umber/70">
                         <span className="text-[9px] sm:text-[10px] md:text-[11px] uppercase tracking-[0.3em] text-taupe font-bold">
                           AUGUST · SATURDAY
                         </span>
@@ -1083,7 +1086,6 @@ export default function App() {
                           AT HOME
                         </span>
                       </div>
-                      <div className="h-px flex-1 bg-sand/45" />
                     </div>
 
                     {/* bottom ornament */}
@@ -1153,7 +1155,7 @@ export default function App() {
                   <div className="flex flex-col items-center">
                     <p className="text-[11px] md:text-sm uppercase tracking-[0.4em] text-umber/80 font-black mb-1 md:mb-2">Saturday</p>
                     <div className="relative inline-block px-6 md:px-8 py-1 md:py-2 border-y border-umber/30">
-                      <p className="serif text-6xl md:text-9xl font-bold text-umber leading-none">01</p>
+                      <p className="serif text-6xl md:text-9xl font-bold text-umber leading-none">1</p>
                       <motion.div
                         animate={{ opacity: [0.4, 1, 0.4] }}
                         transition={{ repeat: Infinity, duration: 2 }}
