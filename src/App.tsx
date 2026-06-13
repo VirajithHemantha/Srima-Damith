@@ -383,7 +383,7 @@ function RSVPForm() {
       <p className="text-[12px] md:text-sm text-umber/80 font-bold uppercase tracking-widest mb-4 md:mb-6 text-center leading-relaxed">
         Please let us know by
         <br />
-        July 15, 2026
+        15.07.2026
       </p>
 
       <form onSubmit={submit} className="space-y-4 md:space-y-4 px-1 md:px-2">
