@@ -586,7 +586,7 @@ export default function App() {
   const toggleVideoPlay = () => {
     if (videoRef.current) {
       if (videoRef.current.paused) {
-        videoRef.current.play().then(() => setIsVideoPlaying(true)).catch(() => {});
+        videoRef.current.play().then(() => setIsVideoPlaying(true)).catch(() => { });
       } else {
         videoRef.current.pause();
         setIsVideoPlaying(false);
@@ -620,7 +620,7 @@ export default function App() {
   const handleEnterInvitation = () => {
     if (audioRef.current) {
       audioRef.current.muted = false;
-      audioRef.current.play().catch(() => {});
+      audioRef.current.play().catch(() => { });
     }
     if (videoRef.current) {
       videoRef.current.pause();
@@ -658,7 +658,7 @@ export default function App() {
       if (!audio.muted) {
         const playPromise = audio.play();
         if (playPromise !== undefined) {
-          playPromise.catch(() => {});
+          playPromise.catch(() => { });
         }
       }
       document.removeEventListener('click', handleInteraction);
@@ -700,7 +700,7 @@ export default function App() {
               audioRef.current.muted = false;
               const playPromise = audioRef.current.play();
               if (playPromise !== undefined) {
-                playPromise.catch(() => {});
+                playPromise.catch(() => { });
               }
             }
             return next;
@@ -1194,7 +1194,7 @@ export default function App() {
                       <h3 className="serif text-4xl md:text-5xl tracking-[0.3em] font-bold text-umber">RSVP</h3>
                     </div>
 
-                    <p className="text-[12px] md:text-sm uppercase tracking-[0.4em] text-umber/80 font-bold mt-1">by 7/15</p>
+                    <p className="text-[12px] md:text-sm uppercase tracking-[0.4em] text-umber/80 font-bold mt-1">by 15.07.2026</p>
                   </div>
                 </div>
               }
