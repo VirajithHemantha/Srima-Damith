@@ -19,7 +19,9 @@ import {
   Sparkles,
   Play,
   Pause,
+  MessageCircle,
 } from "lucide-react";
+import { WishesForm } from "./WishesForm";
 
 // FlipCard Component with 3D Tilt Effect + Premium Mobile Tap Hint
 function FlipCard({
@@ -278,7 +280,7 @@ type GuestEntry = {
 };
 
 function RSVPForm() {
-  const endpoint = "https://script.google.com/macros/s/AKfycbzNTEBAHz6dwBesgZN1ZMzbbtyo2pefiZEkj1BM770pUwUWlFxAPnusvRxzQB0z2J5xMQ/exec";
+  const endpoint = "https://script.google.com/macros/s/AKfycbz3yrzmGPnNL5nj1QRusq2mWHUdKvioDyxVvcjI8D2Sc1yXKgrcCbFsfcdhD9BJX62_Jw/exec";
 
   const [attendance, setAttendance] = useState<Attendance>("yes");
   const [partyType, setPartyType] = useState<PartyType>("individual");
@@ -353,24 +355,18 @@ function RSVPForm() {
 
     setSubmitting(true);
     try {
-      // Try JSON request first (works if endpoint supports CORS).
-      const res = await fetch(endpoint, {
+      const formBody = new URLSearchParams();
+      formBody.append("payload", JSON.stringify(payload));
+
+      await fetch(endpoint, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
+        mode: "no-cors",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: formBody.toString(),
       });
-      if (!res.ok) throw new Error(String(res.status));
       setSuccessMessage("RSVP saved. Thank you!");
     } catch {
-      try {
-        // Fallback for Apps Script deployments without CORS.
-        const fd = new FormData();
-        fd.append("payload", JSON.stringify(payload));
-        await fetch(endpoint, { method: "POST", mode: "no-cors", body: fd });
-        setSuccessMessage("RSVP submitted. Thank you!");
-      } catch {
-        setErrorMessage("Could not submit RSVP. Please try again.");
-      }
+      setErrorMessage("Could not submit RSVP. Please try again.");
     } finally {
       setSubmitting(false);
     }
@@ -1406,6 +1402,33 @@ export default function App() {
                     </div>
                   </div>
                 </div>
+              }
+            />
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.9 }}
+            className="w-full h-full col-span-2 lg:col-span-2"
+          >
+            <FlipCard
+              containerClassName="w-full h-[300px] md:h-[350px] lg:h-[350px]"
+              front={
+                <div className="w-full h-full bg-white p-6 flex flex-col justify-center items-center text-center relative group overflow-hidden">
+                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-sage/5 rounded-full blur-3xl pointer-events-none" />
+                  <div className="absolute -bottom-6 -left-6 text-sage/10">
+                    <MessageCircle size={120} />
+                  </div>
+                  <div className="relative z-10 space-y-3 md:space-y-6">
+                    <p className="serif italic text-2xl md:text-3xl text-umber font-bold group-hover:scale-110 transition-transform">Leave</p>
+                    <h3 className="serif text-3xl md:text-4xl tracking-[0.2em] font-bold text-umber">Wishes</h3>
+                  </div>
+                </div>
+              }
+              back={
+                <WishesForm />
               }
             />
           </motion.div>
