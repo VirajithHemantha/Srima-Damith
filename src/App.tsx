@@ -1394,7 +1394,7 @@ export default function App() {
                     <div className="flex flex-col items-center gap-1">
                       <span className="text-[10px] md:text-xs uppercase tracking-widest text-zinc-500 font-bold">Damith</span>
                       <a
-                        href="tel:0768085101"
+                        href="tel:077 289 2061"
                         className="serif text-lg md:text-2xl font-bold text-umber hover:text-sage transition-colors flex items-center justify-center gap-2"
                       >
                         076 808 5101
